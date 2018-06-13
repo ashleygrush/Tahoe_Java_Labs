@@ -9,5 +9,12 @@ package part_01;
  */
 
 public class Exercise_10 {
+    public static void main(String[] args) {
 
+     double time = 30.30;
+     double km = 12/1.6;
+
+     double mph = time/km;
+        System.out.println("The runner's average is " + mph + " mph.");
+    }
 }

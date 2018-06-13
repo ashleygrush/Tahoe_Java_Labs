@@ -14,5 +14,16 @@ package part_01;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
 
+        int born = 60/6;
+        int dies = 60/12;
+        int immigrates = 60/40;
+
+        long year = 525600;
+        long popIncrease = ((year*3)*((born+immigrates) - dies)) + 380123456;
+
+        System.out.println("The new population in 3 years will be " + popIncrease);
+
+    }
 }
