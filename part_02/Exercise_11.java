@@ -18,6 +18,22 @@ import java.util.Scanner;
  */
 
 public class Exercise_11 {
+    public static void main(String[] args) {
+
+        System.out.println("Enter your investment amount, interest rate percentage and number of years.");
+
+        Scanner scanner = new Scanner(System.in);
+
+        double invest_amount = scanner.nextDouble();
+        double percentage = scanner.nextDouble();
+        double years = scanner.nextDouble();
+
+        double balance = ((percentage/100)*invest_amount)*years;
+
+        System.out.println("with a starting amount of " + invest_amount +
+                ", you will see a new balance of " + (balance+invest_amount) + " after " + years + " number of years.");
+
+    }
 
 }
 

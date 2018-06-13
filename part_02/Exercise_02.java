@@ -14,6 +14,19 @@ import java.util.Scanner;
  */
 
 public class Exercise_02 {
+    public static void main(String[] args) {
 
+        System.out.println("Enter a radius and length.");
+        Scanner scanner = new Scanner(System.in);
 
+        double r = scanner.nextDouble();
+        double l =  scanner.nextDouble();
+
+        double area = r*r*3.1415;
+        double volume = 3.1415*(r*r)*l;
+
+        System.out.println("The area is " + area);
+        System.out.println("The volume is " + volume);
+
+    }
 }

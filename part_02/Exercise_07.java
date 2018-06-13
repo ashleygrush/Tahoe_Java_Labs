@@ -13,7 +13,18 @@ import java.util.Scanner;
  *
  */
 public class Exercise_07 {
+    public static void main(String[] args) {
 
+        System.out.println("Enter a number in minutes up to 1,000,000.");
+        Scanner scanner = new Scanner(System.in);
+
+        double m = scanner.nextDouble();
+
+        double year = m/525600;
+        double days = m/1440;
+
+        System.out.println(m + " minutes is " + year + " year(s) and " + days + " days.");
+    }
 }
 
 

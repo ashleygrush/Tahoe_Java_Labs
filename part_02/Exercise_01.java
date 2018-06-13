@@ -15,6 +15,17 @@ import java.util.Scanner;
  */
 
 public class Exercise_01 {
+    public static void main(String[] args) {
 
+        double fahrenheit;
 
+        System.out.println("Enter a number in Celsius.");
+        Scanner scanner = new Scanner(System.in);
+        double c = scanner.nextDouble();
+
+        fahrenheit = 9*(c/5)+32;
+
+        System.out.println("Number above is " + fahrenheit + "degrees fahrenheit.");
+
+    }
 }
