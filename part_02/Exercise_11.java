@@ -17,6 +17,9 @@ import java.util.Scanner;
  *
  */
 
+// A = P(1+r/n)(nt)
+// A = 5000 (1 + 0.05 / 12) ^ (12(10))
+
 public class Exercise_11 {
     public static void main(String[] args) {
 
@@ -28,8 +31,13 @@ public class Exercise_11 {
         double percentage = scanner.nextDouble();
         double years = scanner.nextDouble();
 
+
+        double exp = Math.pow(12,years);
+        double compound = (invest_amount*((1 + ((percentage/100)/12))*exp));
+
         double balance = ((percentage/100)*invest_amount)*years;
 
+        System.out.println(compound+invest_amount);
         System.out.println("with a starting amount of " + invest_amount +
                 ", you will see a new balance of " + (balance+invest_amount) + " after " + years + " number of years.");
 
