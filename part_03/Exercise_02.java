@@ -9,3 +9,23 @@ package part_03;
 
  */
 
+class MathProblem{
+    public static void main(String[] args) {
+
+        int a = 10;
+        int b = 5;
+        int c = multiply(a,b);
+        int d = divide(a, b);
+                System.out.println((c + d) + " is the sum of " + c + " and " + d);
+    }
+
+     public static int multiply(int a, int b){
+         int i = a * b;
+         return i;
+     }
+
+     public static int divide(int a, int b){
+         int j = a/b;
+         return j;
+     }
+}

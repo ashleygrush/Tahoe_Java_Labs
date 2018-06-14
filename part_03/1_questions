@@ -3,25 +3,26 @@ Answer the following questions
 
 
 1) What is an instance variable?
-
+    A variable that is used within the entire class.
 
 2) How do you create a new object?
-
+    Vehicle car = new Vehicle;
 
 3) After creating a new object, how do you set that objects instance variables?
 
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
-
+    A
 
 5) How many methods can you have in a class?
-
+    No limit to the number of methods.
 
 6) How do you exit a method at any point?
-
+    break;
 
 7) What is the method signature required to return an "int" from a method?
-
+    	every method signature declares the return (data) type that the method returns.
+    	Can be primitive data type, any object type of void (no value returned).
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
 
@@ -35,13 +36,22 @@ Answer the following questions
 11) What is a constructor?
 
 
+
 12) How does Java treat a class without a constructor?
+    It assigns a default constructor.
 
 
 13) What would the constructor for "public class Animal" look like?
+    class Animal {
 
+        private String name;
+
+        public Animal(string name);
+            this.name = name;
+    }
 
 14) What is the effect of passing parameters to a constructor?
+
 
 
 15) When should you pass parameters to a constructor?
@@ -51,16 +61,18 @@ Answer the following questions
 
 
 17) What does the "this" keyword do?
+    this keyword references the method in that class.
 
 
 18) When should you use the "this" keyword?
-
+    when you're wanting to keep the variable within that method.
 
 19) Write an example of the "this" keyword in action.
 
 
-20.) EXplain the difference between static and non-static variables.
-
+20.) Explain the difference between static and non-static variables.
+    static variable shared by all instances of a class
+    non-static variable is each individual instance
 
 21.) Explain the difference between static and non-static methods.
 

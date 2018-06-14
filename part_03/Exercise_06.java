@@ -1,6 +1,6 @@
 package part_03;
 
-import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 
 import java.util.Scanner;
 
@@ -18,18 +18,31 @@ class Exercise_06 {
         long totalMilliseconds = System.currentTimeMillis();
 
         // Get total seconds since midnight, 1/1/1970
+        long totalSeconds = totalMilliseconds/1000;
 
         // Get the current second within the minute within the hour
+        long currentSecond = totalSeconds % 60;
 
         // Get total minutes
+        long totalMinutes = totalSeconds/60;
 
         // Get the current minute in the hour
+        long currentMinutes = totalMinutes % 60;
 
         // Get the total hours
+        long totalHour = totalMinutes/60;
 
         // Get the current hour
+        long currentHour = totalHour % 24;
 
-        // Display results using a 12 hour clock, include AM or PM
+        long time = currentHour + timeZoneChange;
+        System.out.println(time);
 
+        if (time >= 12) {
+            System.out.println("It is currently " + (time - 12) + " : " + currentMinutes + " : " + currentSecond + " pm.");
+        }
+        if (time <= 11) {
+            System.out.println("It is currently " +time+ " : " +currentMinutes+ " : " +currentSecond+ " am.");
+        }
     }
 }
