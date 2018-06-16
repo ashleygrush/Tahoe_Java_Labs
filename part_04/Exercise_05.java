@@ -14,5 +14,12 @@ public class Exercise_05 {
 
     public static void main(String[] strings) {
 
+        int array[] = {1,2,3,4,5};
+
+        for ( int x : array) {
+            System.out.print(x+ " | ");
+        }
+
+
     }
 }

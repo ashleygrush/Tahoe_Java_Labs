@@ -16,5 +16,24 @@ public class Exercise_03 {
 
     public static void main(String[] strings) {
 
+        int twoDiArray[][];
+        twoDiArray = new int[5][10];
+        int count = 0;
+
+        // populates the array
+        for (int rows = 0; rows < twoDiArray.length; rows++) {
+            for (int columns = 0; columns < twoDiArray[0].length; columns++) {
+                twoDiArray[rows][columns] = count;
+                count++;
+            }
+        }
+
+        // prints out the array
+        for (int[] rowDisplay: twoDiArray) {
+            for (int val : rowDisplay) {
+                System.out.print(val+ " | ");
+            }
+            System.out.println();
+        }
     }
 }
