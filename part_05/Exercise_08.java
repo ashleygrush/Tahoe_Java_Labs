@@ -27,9 +27,11 @@ class Park {
 
         // number of total birds
         System.out.println("Since there are only " +numOfCats.cats+ " cats, there are now "
-                +aliveBirds.countBird() + " total number of birds.");
+                +aliveBirds.countBird() + " additional birds.");
 
-
+        // how many birds are in this class
+        int parkBird = aliveBirds.countBird();
+        System.out.println(parkBird+ " total birds in the park.");
     }
 
     // inner class (Animals)
