@@ -8,3 +8,37 @@ package part_05;
  * within each instance of Class_02 to modify Class_02's private instance variables.
  *
  */
+
+class Uno {
+    public static void main(String[] args) {
+        Dos dosClass = new Dos();
+
+        System.out.println(dosClass.multiply(2,4)+ " Ints");
+        System.out.println(dosClass.multiply(2,4.2)+ " Doubles");
+        System.out.println(dosClass.multiply(2.2,4.2)+ " Mix");
+    }
+}
+
+class Dos {
+    private int a;
+    private double b;
+    private double c;
+
+    // int overload (i) > a
+    int multiply(int a, int b) {
+        int i = a * b;
+        return i;
+    }
+
+    // double overload (j) > b
+    double multiply(double a, double b) {
+        double j = a * b;
+        return j;
+    }
+
+    // mix int/double overload (k) > c
+    double multiply(int a, double b) {
+        double k = a * b;
+        return k;
+    }
+}

@@ -10,7 +10,7 @@ package part_05;
 
 import java.util.Scanner;
 
-public class Exercise_06 {                                //Class
+public class Exercise_06 {                               //Class
 
     public static void main(String[] args) {             //main method
         Scanner stdIn = new Scanner(System.in);         // make a scanner object
