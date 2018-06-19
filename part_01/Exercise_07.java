@@ -10,9 +10,11 @@ package part_01;
  *
  */
 
+
 public class Exercise_07 {
     public static void main(String[] args) {
         double pi = Math.PI;
         System.out.println("PI is " + pi);
     }
 }
+

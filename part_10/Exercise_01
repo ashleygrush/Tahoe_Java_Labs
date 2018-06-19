@@ -1,1 +1,4 @@
-Complete Exercise 4 in Chapter 12 self test.
+
+Create an application that demonstrates how to create threads by implementing the runnable interface
+
+Create an application that demonstrates how to create threads by extending Thread

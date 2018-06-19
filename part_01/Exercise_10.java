@@ -8,6 +8,7 @@ package part_01;
  *
  */
 
+
 public class Exercise_10 {
     public static void main(String[] args) {
 
@@ -18,3 +19,4 @@ public class Exercise_10 {
         System.out.println("The runner's average is " + mph + " mph.");
     }
 }
+

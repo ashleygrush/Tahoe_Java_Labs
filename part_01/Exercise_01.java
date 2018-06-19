@@ -9,9 +9,6 @@ package part_01;
  *      Yeehaw!
  */
 
-
-
-
 public class Exercise_01 {
     public static void main(String[] args) {
 
@@ -20,6 +17,3 @@ public class Exercise_01 {
         System.out.println("Yeehaw!");
     }
 }
-
-
-

@@ -11,6 +11,7 @@ package part_01;
  *
  */
 
+
  public class Exercise_04 {
      public static void main(String[] args) {
 
@@ -25,4 +26,5 @@ package part_01;
          System.out.println(d + " " + d*2 + " "  + d*4);
      }
 }
+
 
