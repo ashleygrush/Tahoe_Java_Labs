@@ -1,14 +1,23 @@
 Answer the following:
 
 1) What are the access control modifiers (acm) provided in Java?
-.
+    public
+    private
+    protected
+
 2) Briefly explain each acm and how they differentiate from each other?
+    public - open to any class/package
+    private - visible to class only.
+    protected - only open to the package
 
 3) Why do we use acm's?
+    To lock up certain parts of code that we want to remain the same.
 
 4) What is the risk of not using acm's?
+    Certain things will have limited to no access.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
+
 
 6) Write a method signature that returns an object of type "Car".
 
