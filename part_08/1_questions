@@ -1,27 +1,69 @@
 1) Describe the exception hierarchy.
+        Throwable
+ Error              Exception
+      run-time exception
 
 2) What is a try/catch statement?
+    Try - works through the code; tried the code.
+    Catch - catches and handles any exceptions.
 
 3) Why do we use try/catch statements?
+    To handle exceptions gracefully and in the moment.
 
 4) Write a full example of a try/catch/finally statement that catches two distinct exceptions
+    public int divide(int a, int b){
+    Try{
+        int c = a / b;
+        return c;
+    }
+    catch (int a | int b = 0){
+        sout("Can't divide by zero.");
+    }
+    catch (int a | int b < 0){
+        sout("Please use positive numbers only."
+        }
+    }
+
 
 5) What does it mean to "throw" an exception? How does it work?
+    throwing an exception is throwing a custom exception and tries to handle it.
 
 6) What happens if your application encounters an exception and you don't catch it or throw it?
+    it will stop the program completely.
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
+    ??
 
 8) Write a nested try/catch statement.
+    Try (int a = 5){
+        try (int a <= 4){
+            sout("A is less than 5."
+        sout("A is equal to 5."
+     }
+     catch (ArithmaticException ae){
+        sout("AE caught").
+     }
+   }
 
 9) What does it mean to rethrow an exception?
+    it is rethrown into Exceptions to try and catch it again.
 
 10) What are the 7 methods that come with the Throwable class?
+    1) public Exception() { super(); }
+    2) public Exception(String message) { super(message);}
+    3) public Exception(String message, Throwable cause) { super(message, cause); }
+    4) public Exception(Throwable cause) { super(cause); }
+    5) protected Exception(String message, Throwable cause, boolean enableSuppression,
+    boolean writableStackTrace) { super(message, cause, enableSuppression, writableStackTrace);
+
 
 11) What does the "finally" block do?
+    finally closes/executes regardless.
 
 12) When is the finally block executed? Will it ever not be executed?
+    at the very end. It will always execute.
 
 13) What are the three recently added features to Java exceptions?
+    ??
 
