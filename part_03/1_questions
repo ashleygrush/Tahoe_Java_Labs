@@ -9,10 +9,11 @@ Answer the following questions
     Vehicle car = new Vehicle;
 
 3) After creating a new object, how do you set that objects instance variables?
-
+        get.objectName();
+        set.objectName();
 
 4) What is a reference variable? Why do you need to be careful with reference variables?
-    A
+    an alias for an already existing variable.
 
 5) How many methods can you have in a class?
     No limit to the number of methods.
@@ -21,20 +22,22 @@ Answer the following questions
     break;
 
 7) What is the method signature required to return an "int" from a method?
-    	every method signature declares the return (data) type that the method returns.
-    	Can be primitive data type, any object type of void (no value returned).
+    every method signature declares the return (data) type that the method returns.
+    Can be primitive data type, any object type of void (no value returned).
 
 8) Assuming "int num = 10", what is the syntax to return "num" from a method?
-
+    return num;
 
 9) How do you pass a parameter to a method?
-
+    pass a value by a reference variable.
 
 10) What is the method signature for a method named sum() that takes two int parameters and returns their sum as in int?
-
+    public int sum(int a, int b){
+        int num = a + b;
+        return num;
 
 11) What is a constructor?
-
+    similar to a method but doesnt have a return type.
 
 
 12) How does Java treat a class without a constructor?
@@ -51,14 +54,13 @@ Answer the following questions
     }
 
 14) What is the effect of passing parameters to a constructor?
-
-
+    it's carried down through other extending classes.
 
 15) When should you pass parameters to a constructor?
-
+    when you want private variables to be passed to extended classes.
 
 16) What does the finalize() method do?
-
+    cannot be changed; absolutely final.
 
 17) What does the "this" keyword do?
     this keyword references the method in that class.
@@ -68,11 +70,14 @@ Answer the following questions
     when you're wanting to keep the variable within that method.
 
 19) Write an example of the "this" keyword in action.
-
+    SuperClass.name = name;
+    this.name = name.
 
 20.) Explain the difference between static and non-static variables.
     static variable shared by all instances of a class
     non-static variable is each individual instance
 
 21.) Explain the difference between static and non-static methods.
+    static methods are useful if you don't need other copies.
+    non-static can be changed and updated.
 
