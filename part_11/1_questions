@@ -1,12 +1,14 @@
 1) Turn the following into a Generic interface:
 
-   public interface Consumer {
-       public void consume(String parameter)
+   public interface Consumer<T> {
+       public <T> void consume(<T> parameter)
    }
 
 2) What are a few advantages of using Generic types?
+    They're versatile and add the abiltiy to reuse code safely.
 
 3) What is Type Erasure?
+    Is how Java reads the code once compiled; it erases the generic types and replaces them with the reference type
 
 4) Assuming the following snippet:
 
@@ -18,10 +20,19 @@
     Integer i = returnType(1);
     String s = returnType("String");
 
+    It can, yes. So long as it doesn't extend something like Numbers.
+
 5) What is a Bounded Type Parameter?
+    When you extent Numbers (for example) to take only numbers.
 
 6) Demonstrate the use of Generic Wildcard in a method signature:
+      private static void printlist(List<?> list)
 
 7) What are bounded and unbounded wildcards in Generics?
+     Bounded wildcards can be used when you want to relax the restrictions on a variable.
+        public static void add(List<? extends Number> list)
+     Unbounded wildcard means "unknown."
+        private static void printlist(List<?> list)
 
 8) What is difference between List<? extends T>  and  List <? super T> ?
+    They opporate very similarly, but <? super T> allows you to add variables/elements.
