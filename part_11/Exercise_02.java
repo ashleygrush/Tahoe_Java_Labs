@@ -9,17 +9,20 @@ class Exercise_02 {
         // initialize variables
         Integer myArray[] = {1, 2, 3, 4, 5};
 
-        System.out.print(shuffle(myArray));
+        shuffle(myArray);
     }
 
     // generic method to change two elements of an array
-    public static <T> int shuffle(T[] list) {
+    static <T> void shuffle(T[] list) {
 
         // shuffle index 0 with index 4
         T temp = list[0];
         list[0] = list[4];
         list[4] = temp;
-        return 1;
+
+        for (T val : list) {
+            System.out.print(val+ " | ");
+        }
     }
 }
 
