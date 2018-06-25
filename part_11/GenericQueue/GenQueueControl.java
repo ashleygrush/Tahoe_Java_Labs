@@ -4,7 +4,7 @@ class GenQueueControl{
     public static void main(String[] args) {
 
         // call from FirstQueue Class
-        GenericQueue<Integer> genQueue = new GenericQueue(100);
+        GenericQueue <Integer> genQueue = new GenericQueue(100);
 
         // populate GenericQueue
         for (int i = 0; i < 100; i++) {

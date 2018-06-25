@@ -35,4 +35,4 @@
         private static void printlist(List<?> list)
 
 8) What is difference between List<? extends T>  and  List <? super T> ?
-    They opporate very similarly, but <? super T> allows you to add variables/elements.
+    They operate very similarly, but <? super T> allows you to add variables/elements.

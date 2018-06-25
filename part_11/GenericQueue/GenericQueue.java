@@ -14,17 +14,21 @@ class GenericQueue<T> {
 
     // fill queue
     void put(T e) {
+        // check if full
         if (putLoc == vals.length) {
             return;
         }
+        // filling queue
         vals[putLoc++] = e;
     }
 
     // pull from queue
     public T get() {
+        // check if empty
         if (getLoc == putLoc) {
             return null;
         }
+        // pulling from queue
         return vals[getLoc++];
     }
 }
