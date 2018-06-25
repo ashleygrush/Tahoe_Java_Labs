@@ -19,7 +19,7 @@ Answer the following questions
     No limit to the number of methods.
 
 6) How do you exit a method at any point?
-    break;
+    return;
 
 7) What is the method signature required to return an "int" from a method?
     every method signature declares the return (data) type that the method returns.
