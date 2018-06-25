@@ -34,8 +34,8 @@ class QueueController {
 
 // create queue class}
 class FirstQueue {
-    int q[];
-    int putlocation, getlocation;
+    private int q[];
+    private int putlocation, getlocation;
 
     // create the queue
     FirstQueue(int size) {

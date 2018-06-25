@@ -10,7 +10,7 @@ Answer the following questions:
     a two-dimensional array.
 
 4) What is the code required to create (instantiate) a 2-dimensional int array that is 6 high and 6 wide named "scores"?
-    int scroes[] = int [6][6];
+    int scores[] = int [6][6];
 
 5) Using code, how do you retrieve a String that is the 10th item in a traditional array named dogs?
     if (String i = 0, i < dogs.length; i++);
