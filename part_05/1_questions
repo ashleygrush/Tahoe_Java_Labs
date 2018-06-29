@@ -17,6 +17,7 @@ Answer the following:
     Certain things will have limited to no access.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
+    
 
 
 6) Write a method signature that returns an object of type "Car".
@@ -25,28 +26,46 @@ Answer the following:
 method to another?
 
 8) What is method overloading?
+    two or more methods within the same class can share the same name as long as their parameter declarations are different.
 
 9) Why is method overloading useful? (Hint: as compared to the implementation in the C language.)
+    to compare different parameter types for different results; 10 vs. 10.5.
 
 10) How do you overload a method? What signifies that a method is being overloaded?
+    By using the same method name with different parameters.
 
 11) Below, by writing just the method signature, demonstrate overloading a method 3 times.
+    void overloadDemo1 (int a, int b);
+    void overloadDemo2 (double a, double b);
+    void overloadDemo 3 (long a, long b);
 
 12) How do you overload a constructor? What signifies that a constructor is being overloaded?
+    same as a method overloading.
 
 13) Why do we overload constructors?
+    to construct objects in a variety of ways.
 
 14) Below, by writing just the constructor signature, demonstrate overloading a constructor 3 times.
+    ClassName (int a, int b)
+    ClassName (double a, double b)
+    ClassName (long a, long b)
 
 15) What is recursion?
-
+    is a method that calls to itself to solve problems.
 16) What important considerations must you keep in mind when using recursion?
 
 17) How do you make a method recursive?
+    private static long factorial(int n){
+        if ( n <= 1)
+            return 1;
+        else
+            return n*factorial(n*1)
 
 18) How do you escape a recursive method?
+    return.
 
 19) Explain what "static" is all about?
+
 
 20) When should you use "static"?
 
