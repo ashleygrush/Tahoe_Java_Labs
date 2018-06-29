@@ -3,11 +3,10 @@ package mysql;
 
 public class Course {
 
-
-    int id;
-    String name;
-    int units;
-
+    private int id;
+    private String name;
+    private int credits;
+    private String department;
 
     public int getId() {
         return id;
@@ -25,12 +24,20 @@ public class Course {
         this.name = name;
     }
 
-    public int getUnits() {
-        return units;
+    public int getCredits() {
+        return credits;
     }
 
-    public void setUnits(int units) {
-        this.units = units;
+    public void setCredits(int credits) {
+        this.credits = credits;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
     }
 
     @Override
@@ -38,7 +45,8 @@ public class Course {
         return "Course{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", units=" + units +
+                ", credits=" + credits +
+                ", department='" + department + '\'' +
                 '}';
     }
 }

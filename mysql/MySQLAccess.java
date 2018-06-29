@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class MySQLAccess {
+    // not part of the Java library
     private Connection connection = null;
     private Statement statement = null;
     private PreparedStatement preparedStatement = null;
@@ -16,64 +17,70 @@ public class MySQLAccess {
 
 
         try {
-            example.readDataBase("JDBC Course 1", 3);
+            example.readDataBase("JDBC Course 1", 3, "Computer Science");
         } catch (Exception e){
             System.out.println("error in readDateBase()" + e.getMessage());
             System.out.println(e.getStackTrace());
         }
     }
 
-    public void readDataBase(String course_name, int units)
+    public void readDataBase(String course_name, int credits, String department)
             throws Exception {
         try {
             // This will load the MySQL driver, each DB has its own driver
-            Class.forName("com.mysql.jdbc.Driver");
-            // Setup the connection with the DB
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/University?" +
-                    "user=root&password=&useSSL=false");
+            Class.forName("com.mysql.cj.jdbc.Driver");
 
 
+            // connect to SQL server
+            // Setup the connection with the DB (a static method, using the class name)
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/tahoe_db?" +
+                    "user=root&password=Firenze1@&useSSL=false&serverTimezone=UTC");
+            // in the url: port; link; server; database,which table; username/password; serverTimezone
+
+            // Statement is the object we use to execute queries from the connection
             // Statements allow to issue SQL queries to the database
             statement = connection.createStatement();
 
+            // selects table to work with
             // Result set get the result of the SQL query
-            resultSet = statement.executeQuery("select * from University.courses;");
+            resultSet = statement.executeQuery("select * from tahoe_db.courses;");
 
             //writeResultSet(resultSet);
-            ArrayList<Course> course = mapResultSetToObjects(resultSet);
+            ArrayList<Course> courses = mapResultSetToObjects(resultSet);
 
-            for (Course c : course){
+            for (Course c : courses){
                 System.out.println(c.toString());
             }
 
-
+            // inserts data into the table
             // PreparedStatements can use variables and are more efficient
+            // ?, ? gets values for prepared statements below
             preparedStatement = connection
-                    .prepareStatement("insert into  University.courses (name, units) " +
-                            "values (?, ?)");
+                    .prepareStatement("insert into tahoe_db.courses (name, credits, department) " +
+                            "values (?, ?, ?)");
             // Parameters start with 1
             preparedStatement.setString(1, course_name);
            // preparedStatement.setString(2, credits);
-            preparedStatement.setInt(2, units);
+            preparedStatement.setInt(2, credits);
             //preparedStatement.setString(4, department);
+            preparedStatement.setString(3, department);
             preparedStatement.executeUpdate();
 
 
-            preparedStatement = connection
-                    .prepareStatement("SELECT * from University.courses");
+            preparedStatement = connection.prepareStatement("SELECT * from tahoe_db.courses");
             resultSet = preparedStatement.executeQuery();
 
-            //writeResultSet(resultSet);
+            writeResultSet(resultSet);
 
 
 
              //Remove again the insert comment
             preparedStatement = connection
-                    .prepareStatement("delete from University.courses where name = ? ; ");
+                    .prepareStatement("delete from tahoe_db.courses where name = ? ; ");
             preparedStatement.setString(1, "JDBC Course 1");
             preparedStatement.executeUpdate();
 
-            resultSet = statement.executeQuery("select * from University.courses");
+            resultSet = statement.executeQuery("select * from tahoe_db.courses");
 
             writeMetaData(resultSet);
 
@@ -105,15 +112,20 @@ public class MySQLAccess {
             // It is possible to get the columns via name
             // also possible to get the columns via the column number
             // which starts at 1
-            // e.g. resultSet.getSTring(2);
+            // e.g. resultSet.getString(2);
+            int id = resultSet.getInt("id");
             String course = resultSet.getString("name");
             //String description = resultSet.getString("description");
-            int credits = resultSet.getInt("units");
+            int credits = resultSet.getInt("credits");
             //String department = resultSet.getString("department");
+            String department = resultSet.getString("department");
+
+            System.out.println("ID number: " + id);
             System.out.println("Course: " + course);
            // System.out.println("Description: " + description);
             System.out.println("Credits: " + credits);
            // System.out.println("Department: " + department);
+            System.out.println("Department: " + department);
             System.out.println("---------------------------------");
             System.out.println("---------------------------------");
 
@@ -129,16 +141,14 @@ public class MySQLAccess {
             Course c = new Course();
             c.setId(resultSet.getInt("id"));
             c.setName(resultSet.getString("name"));
-            c.setUnits(resultSet.getInt("units"));
+            c.setCredits(resultSet.getInt("credits"));
+            c.setDepartment(resultSet.getString("department"));
 
             retList.add(c);
         }
 
         return retList;
     }
-
-
-
 
 
     // You need to close the resultSet
