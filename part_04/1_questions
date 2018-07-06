@@ -64,7 +64,10 @@ Answer the following questions:
     to display/fill an array.
 
 19) What is "The Collections Framework"? What classes does it include?
-    ??
+    A collections framework is a unified architecture for representing and manipulating collections,
+     enabling collections to be manipulated independently of implementation details.
+     It contains mostly interface classes.
+
 
 20) How do you iterate over a two-dimensional array? Demonstrate using psuedo code.
     You use a nested for loop.
