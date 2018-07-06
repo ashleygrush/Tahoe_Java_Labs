@@ -45,14 +45,6 @@ public class Exercise_03 {
             System.out.println("Error reading file." + exc);
 
 
-            // readLine()
-//            try {
-//                line = filein.readLine();
-//                if (i != 0) System.out.println(line);
-//            } while (i != -1);
-//        } catch (IOException rlioe) {
-//            System.out.println("Error reading file as line." + rlioe);
-
 
             // close file
             try {
