@@ -33,7 +33,7 @@
 
 7) When catching exception in an inheritance hierarchy, should you catch the subclass exception or the
 superclass exception first? Why?
-    ??
+    subclass first; because if you go for the superclass exception first, it may skip out on any other subclass exceptions.
 
 8) Write a nested try/catch statement.
     Try (int a = 5){
@@ -65,5 +65,5 @@ superclass exception first? Why?
     at the very end. It will always execute.
 
 13) What are the three recently added features to Java exceptions?
-    ??
+    try, try/catch and try-with-resources.
 
