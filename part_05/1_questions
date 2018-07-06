@@ -17,13 +17,18 @@ Answer the following:
     Certain things will have limited to no access.
 
 5) Write a method signature that receives an object of type "Car" as a parameter.
-    
-
+    public getCar(Car car){
+    }
 
 6) Write a method signature that returns an object of type "Car".
+    public <T> setCar(){
+        return <T> Car;
+    }
 
 7) What is a very important consideration to keep in mind when passing objects (hint: by reference) from one
 method to another?
+    when passing by reference the object remains the same.
+    Pass by value it's own copy; thus any changes made to the original object won't be noticed.
 
 8) What is method overloading?
     two or more methods within the same class can share the same name as long as their parameter declarations are different.
@@ -65,22 +70,34 @@ method to another?
     return.
 
 19) Explain what "static" is all about?
-
+    Static is about keeping things constant and packaged into one local package.
 
 20) When should you use "static"?
+    When you need the variable through the entire class; a constant.
 
 21) What differentiates static variables from instance variables?
+    Static variables are used to as a constant variable within the class;
+    instance variables are only used within that instance (or method).
 
 22) What is a the quicksort? Briefly describe how the quicksort works.
+    A quicksort is a systematic method for placing the elements of an array in order.
+    A quicksort first divides a large array into two smaller sub-arrays, one large and one small.
+    It then keeps dividing as such until the array is in order (small > large).
 
 23) What is a nested, or inner, class?
+    A class within a class; rarely used unless you want to keep that class "locked" within a class.
 
 24) What is the scope of a nested class?
+    Only within the nested class and static variables of the outer class.
 
 25) What is a variable-arity method?
+    a method that accepts an arbitrary set of arguments.
 
 26) What makes a variable-arity method unique? When should you use it?
+    it's useful with math related methods; when taking in different arguments to get one outcome.
 
 27) What is the shorthand name for variable-arity?
+    varargs
 
 28) Why important considerations must you keep in mind when using variable-arity methods? (hint: ambiguity)
+    because it can be ambiguous, it can become more faulty and not as clean.
